@@ -1,0 +1,12 @@
+body {
+  font-family: 'Gudea', sans-serif;
+}
+
+.jumbotron {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1433208406127-d9e1a0a1f1aa?q=80&fm=jpg&s=8a66d30e7fa9e02f2d0ac9716e3000b6");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
