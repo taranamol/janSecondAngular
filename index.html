@@ -11,10 +11,10 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
     <!-- ngRoute -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
-     <!-- bootstrap js -->
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- jquery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <!-- bootstrap js -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- custom script -->
     <script type="text/javascript" src="app.js"></script> 
   </head>
@@ -44,10 +44,23 @@
     <div class="container">
       <div class="row"> <center>
         <div class="col-md-12">
-          
-        </div>  
-      </div>
-    <center></div>
+          <form name = "postForm" ng-submit="createPost()">
+            <div class="form-group">
+              <input type="text" ng-model="post.author" class="form-control" placeholder="name" required>
+            </div>
+             <div class="form-group">
+              <input type="text" ng-model="post.message" class="form-control" placeholder="write your message for the lovely couple" required>
+            </div>
+             <input type="submit" value="save your message!" class="btn btn-default">
+        </form> 
+        <ul>
+          <li ng-repeat="post in posts">
+            <em>{{post.author}}</a></em> by {{post.message}}
+          </li>
+        </ul>
+      </div>  
+    </div> </center>
+   </div>
 
   </body>
 
