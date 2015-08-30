@@ -3,8 +3,8 @@
     <title> january second </title>
     <!-- latest compiled and minified bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- gudea font  -->
-    <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+    <!-- lobster font  -->
+  <link href='https://fonts.googleapis.com/css?family=Lobster|Dancing+Script|Great+Vibes' rel='stylesheet' type='text/css'>
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css">
     <!-- angular -->
@@ -21,43 +21,100 @@
 
   <body ng-controller="MainCtrl">
 
-    <div class="jumbotron">
-      <div class="container">
-        <h2>janmeet & itinder<br>| january, second |</h2>
-      </div>
+  <!-- JUMBOTRON -->
+  <div class="jumbotron" id="heading">
+    <div class="container">
+      <h1>janmeet & itinder</h1>
     </div>
+  </div>
 
-
+    <!-- NAVBAR -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
       <center>
-      <button type="button" class="btn btn-default navbar-btn">location & date</button>
-      <button type="button" class="btn btn-default navbar-btn">janmeet</button>
-      <button type="button" class="btn btn-default navbar-btn">itinder</button>
-      <button type="button" class="btn btn-default navbar-btn">rsvp</button>
+      <button type="button" class="btn btn-default navbar-btn"><a href="#brideandgroom">our story</button>
+      <button type="button" class="btn btn-default navbar-btn"><a href="#whenandwhere">when & where</button>
+      <button type="button" class="btn btn-default navbar-btn"><a href="#guestbook">guestbook</button>
+      <button type="button" class="btn btn-default navbar-btn"><a href="#contactinfo">contact info</button>
       <center>
       </div>
     </nav>
 
+    
+    <div class="container">
+      <div class="row" id="brideandgroom"> <center>
+        <div class="col-md-6">
+        <img src="https://lh3.googleusercontent.com/z1XD1cUdLK5nqZjrkCFNX84nex0lp0n8eGmV4pzXqQ=s1172-no">
+        <h3>groom</h3>
+        </div>
+        <div class="col-md-6">
+        <img src="https://lh3.googleusercontent.com/x27hLO905Z9dAuZUN7DVXOAjpaYp-nZqQMF_EpzDEQ=s765-no">
+        <h3>bride</h3>
+        </div>
+      </center></div>
+    </div>
+
+
+    <br>
+    <br>
+
+    <div class="jumbotron" id="whenandwhere">
+    <div class="container">
+      <div class="row"> <center>
+        <div class="col-md-12">
+        <h2> anand karaj info </h2>
+       <p>janmeet & itinder will be getting married this upcoming january second! <br> the anandkaraj will take place in panjab. </p>
+        </div>
+        <div class="col-md-6">
+          <legend>engagement</legend>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus, quam et sodales elementum, lorem nisi interdum ex, eget mattis lorem arcu eget tellus. Sed non ultrices orci, fringilla congue purus. Ut porttitor euismod lorem. Vestibulum nec felis ac justo scelerisque efficitur. Curabitur eget augue ullamcorper, dapibus enim auctor, ornare neque. Suspendisse tempor porttitor ultrices. Cras viverra turpis eget ante placerat, sit amet ornare magna efficitur. </p>
+        </div>
+        <div class="col-md-6">
+          <legend>anandkaraj</legend>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus, quam et sodales elementum, lorem nisi interdum ex, eget mattis lorem arcu eget tellus. Sed non ultrices orci, fringilla congue purus. Ut porttitor euismod lorem. Vestibulum nec felis ac justo scelerisque efficitur. Curabitur eget augue ullamcorper, dapibus enim auctor, ornare neque. Suspendisse tempor porttitor ultrices. Cras viverra turpis eget ante placerat, sit amet ornare magna efficitur. </p
+        </div>
+      </center></div>
+    </div>
+    </div>
+
+    <br>
+    <br>
+<!--  -->
 
 
     <div class="container">
       <div class="row"> <center>
-        <div class="col-md-12">
-          <form name = "postForm" ng-submit="createPost()">
+      <div class="col-md-12" id="guestbook">
+      <h2> guestbook </h2>
+
+        <div class="col-md-6" id="guestbook">
+        <!-- POSTS FORM -->
+          <form name="postForm" ng-submit="createPost()">
             <div class="form-group">
-              <input type="text" ng-model="post.author" class="form-control" placeholder="name" required>
+              <input type="author" ng-model="post.author" class="form-control" placeholder="name" required>
             </div>
              <div class="form-group">
               <input type="text" ng-model="post.message" class="form-control" placeholder="write your message for the lovely couple" required>
             </div>
-             <input type="submit" value="save your message!" class="btn btn-default">
+             <input type="submit" value="post your message!" class="btn btn-default">
         </form> 
+        <!-- POSTS WILL APPEAR -->
+        <div class="col-md-6" id="guestbook">
         <ul>
           <li ng-repeat="post in posts">
-            <em>{{post.author}}</a></em> by {{post.message}}
+            {{post.author}} {{post.message}}
           </li>
         </ul>
+      </div>  
+    </div> </center>
+   </div>
+
+   <div class="container">
+      <div class="row"> <center>
+        <div class="col-md-12" id="contactinfo">
+        <h2> contact info </h2>
+          
+        
       </div>  
     </div> </center>
    </div>
