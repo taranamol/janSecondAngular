@@ -2,12 +2,12 @@ angular.module('janSecond', ['ngMap'])
     
   .controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
 
-    $scope.messages = [];
+    $scope.allMessages = janSecondAngular.query();
 
     $scope.message = {};
   
   $scope.createMessage = function() {
-      $scope.messages.push($scope.message);
+      $scope.allMessages.push($scope.message);
       $scope.message = {};
     };
   }])
